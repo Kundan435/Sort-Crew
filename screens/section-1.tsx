@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react'
 import Image from 'next/image'
 import PlaneIcon from '../components/svg/plane'
+import { useViewport } from '../contexts/viewport'
 const Section1 = () => {
+  const { width } = useViewport()
+  console.log(width)
   return (
     <Fragment>
       <div className="hero-wrapper mb-10">
         <div className="hero-heading sub-heading">
-          <p className="label">A trusted digital agency</p>
+          <p className="label">A trusted digital agency.</p>
           <h1>Quality digital services you really want!</h1>
           <div className="flex">
             <button className="button pill-button bg-blue mr-2">
@@ -18,15 +21,17 @@ const Section1 = () => {
           </div>
         </div>
 
-        <div className="hero-image">
-          <Image
-            src="/girl-pointing.png"
-            alt="girl-pointing-to-webservices"
-            layout="fill"
-            objectFit="contain"
-            className="hero-img-girl"
-          />
-        </div>
+        {width > 1250 && (
+          <div className="hero-image">
+            <Image
+              src="/girl-pointing.png"
+              alt="girl-pointing-to-webservices"
+              layout="fill"
+              objectFit="contain"
+              className="hero-img-girl"
+            />
+          </div>
+        )}
       </div>
     </Fragment>
   )
