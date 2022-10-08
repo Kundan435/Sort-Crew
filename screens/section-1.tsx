@@ -9,7 +9,7 @@ const Section1 = () => {
     <Fragment>
       <div className="hero-wrapper mb-10">
         <div className="hero-heading sub-heading">
-          <p className="label">A trusted digital agency.</p>
+          <p className="label">A trusted digital agency new.</p>
           <h1>Quality digital services you really want!</h1>
           <div className="flex">
             <button className="button pill-button bg-blue mr-2">
